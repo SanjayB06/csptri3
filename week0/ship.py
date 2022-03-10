@@ -1,6 +1,7 @@
 import os
 import time
-def printShip(distance):
+def printShip():
+    distance = int(input("How far should the ship go? "))
     for x in range(int(distance)):
         print("  "*x,"    |\ ")
         print("  "*x,"    |/ ")
@@ -10,4 +11,4 @@ def printShip(distance):
         os.system("clear")
         time.sleep(0.006)
 if __name__ == "__main__":
-    printShip(60)
+    printShip()
