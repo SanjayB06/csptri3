@@ -29,10 +29,10 @@ subMenu = {
     "exec":f2,}
 }
 mainMenu = {
-    1: {"display":"Print Tree",
+    1: {"display":"Christmas Tree",
     "exec":printTree,
     "type":"func"},
-    2: {"display":"Print Ship",
+    2: {"display":"Ship",
     "exec":printShip,
     "type":"func"},
     3: {"display":"Keypad ",
