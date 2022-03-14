@@ -5,6 +5,24 @@
 
 ## 5.1
 
+### Notes
+
+Accelerometers
+- Used for airbag deployment and lateral movement detection
+
+- task completion changes based on innovations
+- some effects arent anticipated
+- effects can be viewed in different ways
+
+Microtransactions
+- "Free" Games/Apps
+- Cosmetics/Pay-to-win/Paywell to functionality
+- gold, v-bucks, coins, "chips", SBUX
+- Loot Boxes: banned in some countries
+
+- Responsible programmers consider all implications
+
+
 ### 1. Come up with three of your own Beneficial and corresponding Harmful Effects of Computing
 
 | Beneficial  | Harmful  |
@@ -20,6 +38,25 @@ Dopamine issues do exist for high schoolers in the modern age. Lots of apps and 
 
 
 ## 5.2
+
+### Notes
+Digital Divide
+- Differing access to computer devices and internet based on
+  - socioeconomic
+    - income
+  - geographic
+    - isolated areas dont have internet
+  - demographic
+    - Age
+    - Religion
+  - Countries
+    - Computers are not that common in rural areas
+    - Only small amount of websites
+    - Internet is used to advocate and protect the government
+    - Higher level of surveillance on the internet to protect the government
+- Affect both groups and individuals
+- individuals, gvmt, and organizations all affect it
+
 
 ### How does someone empower themself in a digital world?
 
