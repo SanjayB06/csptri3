@@ -26,6 +26,7 @@ subMenu = {
     "exec":f1,
     "type":"func"},
     2: {"display":"f2",
+    "type":"func",
     "exec":f2,}
 }
 mainMenu = {
