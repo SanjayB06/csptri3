@@ -19,6 +19,7 @@ def presentMenu(menu):
     if (choice) in menu:
         if menu[choice]["type"] == "func":
             menu[choice]["exec"]()
+
         else:
             presentMenu(menu[choice]["exec"])
 subMenu = {
@@ -27,7 +28,13 @@ subMenu = {
     "type":"func"},
     2: {"display":"f2",
     "type":"func",
-    "exec":f2,}
+    "exec":f2,},
+    3: {
+        "display": "Quit program",
+        "exec":quit,
+        "type":"func"
+    }
+
 }
 mainMenu = {
     1: {"display":"Christmas Tree",
@@ -46,8 +53,17 @@ mainMenu = {
         "display":"Submenu",
         "exec": subMenu,
         "type":"submenu"
+    },
+    6: {
+        "display": "Quit program",
+        "exec":quit,
+        "type":"func"
     }
 }
 
 if __name__ == "__main__":
-    presentMenu(mainMenu)
+    while True:
+        presentMenu(mainMenu)
+        halt = input("Do you want to continue (y/n)? ")
+        if halt.lower() == "n":
+            break
