@@ -2,4 +2,4 @@
 
 # TPT Home - Sanjay
 
-- [Week 0](week0)
+- [Week 0](testprep/week0)
