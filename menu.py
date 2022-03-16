@@ -16,6 +16,8 @@ def buildMenu(menu):
 def presentMenu(menu):
     buildMenu(menu)
     choice = int(input())
+    while choice not in menu:
+        choice = int(input("Please elect a valid item. "))
     if (choice) in menu:
         if menu[choice]["type"] == "func":
             menu[choice]["exec"]()
