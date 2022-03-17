@@ -1,4 +1,4 @@
-
+from week1.hack import InfoDb
 # Hack 2a
 def for_loop():
     for x in InfoDb:
@@ -34,3 +34,5 @@ def recursive_loop():
         print()
         recursive_loop(n+1)
 
+if __name__ == "__main__":
+    for_loop()
