@@ -2,6 +2,7 @@ from week0.christmastree import printTree
 from week0.ship import printShip
 from tri2.keypad import print_matr
 from tri2.swap import swap
+from week1.fibo import fibo,printFibo
 def f1():
     print('f1')
 def f2():
@@ -57,6 +58,11 @@ mainMenu = {
         "type":"submenu"
     },
     6: {
+        "display":"Fibonacci",
+        "exec": printFibo,
+        "type":"func"
+    },
+    7: {
         "display": "Quit program",
         "exec":quit,
         "type":"func"
