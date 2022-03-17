@@ -3,6 +3,8 @@ from week0.ship import printShip
 from tri2.keypad import print_matr
 from tri2.swap import swap
 from week1.fibo import fibo,printFibo
+from week1.hack import InfoDb
+from week1.hacktwo import for_loop,while_loop,recursive_loop
 def f1():
     print('f1')
 def f2():
@@ -39,6 +41,28 @@ subMenu = {
     }
 
 }
+hack2Menu = {
+    1: {
+        "display":"Hack 2a",
+        "exec": for_loop,
+        "type":"func"
+    },
+    2: {
+        "display":"Hack 2a",
+        "exec": recursive_loop,
+        "type":"func"
+    },
+    1: {
+        "display":"Hack 2a",
+        "exec": while_loop,
+        "type":"func"
+    },
+    4: {
+        "display":"Quit program",
+        "exec": quit,
+        "type":"func"
+    },
+}
 mainMenu = {
     1: {"display":"Christmas Tree",
     "exec":printTree,
@@ -63,6 +87,11 @@ mainMenu = {
         "type":"func"
     },
     7: {
+        "display":"Hack 2",
+        "exec": hack2Menu,
+        "type":"submenu"
+    },
+    8: {
         "display": "Quit program",
         "exec":quit,
         "type":"func"

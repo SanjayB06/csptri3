@@ -1,5 +1,3 @@
-from prometheus_client import Info
-from hackone import InfoDb
 
 # Hack 2a
 def for_loop():
@@ -24,7 +22,8 @@ def while_loop():
 
 # Hack 3b
 
-def recursive_loop(n):
+def recursive_loop():
+    n=0
     if n>= len(InfoDb):
         return 
     else:
@@ -35,4 +34,3 @@ def recursive_loop(n):
         print()
         recursive_loop(n+1)
 
-recursive_loop(0)
