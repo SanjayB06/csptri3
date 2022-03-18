@@ -2,6 +2,13 @@
 
 # TPT Week 1 
 ## 5.3
+### Notes
+
+- reflect existing biases
+    - due to biases written in 
+    - biases present in environment
+- action should be taken to eliminate biases
+- can be at any level of development
 
 ### Video Questions
 - Does the owner think it was intentional?
@@ -17,6 +24,23 @@ Have a more diverse team of developers who can help train the algorithm to recog
 
 
 ## 5.4
+
+### Notes
+
+Public Data Sets:
+- Kaggle
+- Google Public Datasets
+- Data.gov
+- Local Government
+
+Distributed Computing:
+- Lots of computers do one task together
+  Examples:
+- Spotify with collab playlists
+- growdfunding
+- blockchain
+
+
 
 ### Questions
 
