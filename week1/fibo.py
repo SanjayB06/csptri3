@@ -1,5 +1,3 @@
-from tkinter import N
-
 
 def fibo(n):
     if n == 1 or n==0:
