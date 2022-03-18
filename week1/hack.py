@@ -1,20 +1,23 @@
 # Hack 1: 
+
+#InfoDb contains dictionaries that each have data about movies
 InfoDb = []
-# List with dictionary records placed in a list  
 InfoDb.append({  
-               "FirstName": "John",  
-               "LastName": "Mortensen",  
-               "DOB": "October 21",  
-               "Residence": "San Diego",  
-               "Email": "jmortensen@powayusd.com",  
-               "Owns_Cars":["2015 Fusion","2011 Ranger","2003 Excursion","1997 F-350", "1969 Cadillac"]  
+               "Title": "Jurassic Park",  
+               "Year": "1993",  
+               "Director": "Steven Spielberg",  
+               "Genres":["Sci-fi","Action"]  
+              })  
+InfoDb.append({  
+               "Title": "The Dark Knight",  
+               "Year": "2008",  
+               "Director": "Christopher Nolan",  
+               "Genres":["Action","Crime","Thriller"]  
+              })  
+InfoDb.append({  
+               "Title": "The Godfather",  
+               "Year": "1972",  
+               "Director": "Francis Ford Coppola",  
+               "Genres":["Crime","Drama"]  
               })  
 
-InfoDb.append({  
-               "FirstName": "Sunny",  
-               "LastName": "Naidu",  
-               "DOB": "August 2",  
-               "Residence": "San Diego",  
-               "Email": "snaidu@powayusd.com",  
-               "Owns_Cars":["A","B","C"]  
-              })  

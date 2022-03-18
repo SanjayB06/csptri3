@@ -43,18 +43,18 @@ subMenu = {
 }
 hack2Menu = {
     1: {
-        "display":"Hack 2a",
+        "display":"Hack 2a (for loop)",
         "exec": for_loop,
         "type":"func"
     },
     2: {
-        "display":"Hack 2a",
-        "exec": recursive_loop,
+        "display":"Hack 2b (while loop)",
+        "exec": while_loop,
         "type":"func"
     },
-    1: {
-        "display":"Hack 2a",
-        "exec": while_loop,
+    3: {
+        "display":"Hack 2c (recursive)",
+        "exec": recursive_loop,
         "type":"func"
     },
     4: {
@@ -87,7 +87,7 @@ mainMenu = {
         "type":"func"
     },
     7: {
-        "display":"Hack 2",
+        "display":"Hack 2 (InfoDb)",
         "exec": hack2Menu,
         "type":"submenu"
     },
