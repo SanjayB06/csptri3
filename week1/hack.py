@@ -20,4 +20,10 @@ InfoDb.append({
                "Director": "Francis Ford Coppola",  
                "Genres":["Crime","Drama"]  
               })  
+InfoDb.append({  
+               "Title": "The Batman",  
+               "Year": "2022",  
+               "Director": "Matt Reeves",  
+               "Genres":["Crime","Superhero","Action"]  
+              })  
 
