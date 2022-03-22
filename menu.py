@@ -5,6 +5,8 @@ from tri2.swap import swap
 from week1.fibo import fibo,printFibo
 from week1.hack import InfoDb
 from week1.hacktwo import for_loop,while_loop,recursive_loop
+from week2.hack2 import dispfac
+from week2.hack2 import dispSeries
 def f1():
     print('f1')
 def f2():
@@ -43,7 +45,7 @@ subMenu = {
     }
 
 }
-hack2Menu = {
+week1hack2Menu = {
     1: {
         "display":"Hack 2a (for loop)",
         "exec": for_loop,
@@ -64,6 +66,23 @@ hack2Menu = {
         "exec": quit,
         "type":"func"
     },
+}
+week2hack2Menu = {
+  1: {
+    "display": "Factorial calculator",
+    "exec": dispfac,
+    "type": "func"
+  },
+  2: {
+    "display": "Factorial series",
+    "exec": dispSeries,
+    "type": "func"
+  },
+  3: {
+    "display": "Quit",
+    "exec": quit,
+    "type": "func"
+  }
 }
 mainMenu = {
     1: {"display":"Christmas Tree",
@@ -89,11 +108,16 @@ mainMenu = {
         "type":"func"
     },
     7: {
-        "display":"Hack 2 (InfoDb)",
-        "exec": hack2Menu,
+        "display":"Week 1 Hack 2 (InfoDb)",
+        "exec": week1hack2Menu,
         "type":"submenu"
     },
     8: {
+        "display":"Factorial With OOP",
+        "exec": week2hack2Menu,
+        "type":"submenu"
+    },
+    9: {
         "display": "Quit program",
         "exec":quit,
         "type":"func"
