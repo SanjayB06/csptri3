@@ -7,6 +7,7 @@ from week1.hack import InfoDb
 from week1.hacktwo import for_loop,while_loop,recursive_loop
 from week2.hack2 import dispfac
 from week2.hack2 import dispSeries
+from week2.hack3 import superfac
 def f1():
     print('f1')
 def f2():
@@ -67,7 +68,7 @@ week1hack2Menu = {
         "type":"func"
     },
 }
-week2hack2Menu = {
+factorialMenu = {
   1: {
     "display": "Factorial calculator",
     "exec": dispfac,
@@ -79,6 +80,11 @@ week2hack2Menu = {
     "type": "func"
   },
   3: {
+    "display": "Superfactorial",
+    "exec": superfac,
+    "type": "func"
+  },
+  4: {
     "display": "Quit",
     "exec": quit,
     "type": "func"
@@ -113,8 +119,8 @@ mainMenu = {
         "type":"submenu"
     },
     8: {
-        "display":"Factorial With OOP",
-        "exec": week2hack2Menu,
+        "display":"Factorial functions",
+        "exec": factorialMenu,
         "type":"submenu"
     },
     9: {
