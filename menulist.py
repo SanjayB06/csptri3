@@ -8,6 +8,7 @@ from week1.hacktwo import for_loop,while_loop,recursive_loop
 from week2.hack2 import dispfac
 from week2.hack2 import dispSeries
 from week2.hack3 import superfac
+from week2.hack4 import printpal
 def f1():
     print('f1')
 def f2():
@@ -136,6 +137,11 @@ mainMenu = {
         "type":"submenu"
     },
     6: {
+        "display":"Palindrome",
+        "exec": printpal,
+        "type":"func"
+    },
+    7: {
         "display": "Quit program",
         "exec":quit,
         "type":"func"

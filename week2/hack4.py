@@ -9,7 +9,13 @@ class palindrome():
             return True
         else:
             return False
-
+def printpal():
+    string = input("Enter a word/sentence to test: ")
+    pal = palindrome(string)
+    if pal():
+        print("That is a palindrome! ")
+    else:
+        print("Not a palindrome")
 if __name__ == "__main__":
     pal = palindrome("race car")
     print(pal())    
