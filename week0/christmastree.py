@@ -1,15 +1,23 @@
-def printTree():
-    import random
+
+
+def print_tree():
+    # import random
+    # random was unused and resulted in an error
+
+    print("Honestly I don't think it really looks like a tree unless your input is greater than 7")
+    print("but the choice is yours")
     row = int((input("How large should the tree be? ")))
     for x in range(row):
-        x+=1
+        x += 1
         spaces = row-x
         # output = " "*spaces
         # for y in range(2*x):
         #     output+=random.choice(["\033[0;32m*\033[00m","\033[0;32m*\033[00m","\033[0;32m*\033[00m","\033[0;31m*\033[00m"])
         # print(output)
-        print(" "*spaces,"\033[0;32m*\033[00m "*x)
-    print(" "*(row-3),"* "*3)
-    print(" "*(row-3),"* "*3)
+        print(" "*spaces, "\033[0;32m*\033[00m "*x)
+    print(" "*(row-3), "* "*3)
+    print(" "*(row-3), "* "*3)
+
+
 if __name__ == "__main__":
-    printTree()
+    print_tree()
