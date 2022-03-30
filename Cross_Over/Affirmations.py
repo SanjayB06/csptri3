@@ -22,7 +22,7 @@ def speak():
             options()
             ask()
             break
-    while compliment == 13:
+    while compliment == 727:
         print(user + " no one codes like " + user)
         print()
         print()
@@ -43,13 +43,13 @@ def speak():
 
 
 # saved items
-Options = ["1 - great", "2 - smart", "3 - hard-worker", "13 - ?????"]
+Options = ["1 - great", "2 - smart", "3 - hard-worker", "727 - ?????"]
 Border = "----------------"
 compliment = "un-picked"
 
 
+# presents compliment options
 def options():
-    # Present Options
     print()
     print(Border)
     for x in Options:
@@ -69,7 +69,7 @@ def ask():
     print()
     global compliment
     compliment = int(input("now which option do you want?: "))
-    if compliment != 1 or 2 or 3 or 13:
+    if compliment != 1 or 2 or 3 or 727:
         print("Please pick a proper option")
     speak()
 

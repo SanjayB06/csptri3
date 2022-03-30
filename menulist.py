@@ -1,14 +1,15 @@
-from week0.christmastree import printTree
-from week0.ship import printShip
+from week0.christmastree import print_tree
+from week0.ship import print_ship
 from tri2.keypad import print_matr
 from tri2.swap import swap
-from week1.fibo import fibo, printFibo
+from week1.fibo import fibo, print_fibo
 from week1.hack import InfoDb
 from week1.hacktwo import for_loop, while_loop, recursive_loop
 from week2.hack2 import dispfac
-from week2.hack2 import dispSeries
+from week2.hack2 import disp_series
 from week2.hack3 import superfac
-from week2.hack4 import printpal
+from week2.hack4 import print_pal
+# from Cross_Over import Affirmations
 
 
 def f1():
@@ -21,11 +22,11 @@ def f2():
 
 subMenu = {
     1: {"display": "f1",
-    "exec": f1,
-    "type": "func"},
+        "exec": f1,
+        "type": "func"},
     2: {"display": "f2",
-    "type": "func",
-    "exec": f2, },
+        "type": "func",
+        "exec": f2, },
     3: {
         "display": "Quit program",
         "exec": quit,
@@ -58,12 +59,12 @@ week1hack2Menu = {
 drawingMenu = {
     1: {
         "display": "Christmas Tree",
-        "exec": printTree,
+        "exec": print_tree,
         "type": "func"
     },
     2: {
         "display": "Print Ship",
-        "exec": printShip,
+        "exec": print_ship,
         "type": "func"
     },
     3: {
@@ -75,7 +76,12 @@ drawingMenu = {
         "display": "quit",
         "exec": quit,
         "type": "func"
-    }
+    },
+    # 5: {
+    #     "display": "Affirmations",
+    #     "exec": Affirmations,
+    #     "type": "func"
+    # }
 }
 factorialMenu = {
   1: {
@@ -85,7 +91,7 @@ factorialMenu = {
   },
   2: {
     "display": "Factorial series",
-    "exec": dispSeries,
+    "exec": disp_series,
     "type": "func"
   },
   3: {
@@ -102,7 +108,7 @@ factorialMenu = {
 mathMenu = {
     1: {
         "display": "Fibonacci",
-        "exec": printFibo,
+        "exec": print_fibo,
         "type": "func"
     },
     2: {
@@ -124,8 +130,8 @@ mainMenu = {
         "type": "submenu"
     },
     2: {"display": "Swap ",
-    "exec": swap,
-    "type": "func"},
+        "exec": swap,
+        "type": "func"},
     3: {
         "display": "Submenu",
         "exec": subMenu,
@@ -143,7 +149,7 @@ mainMenu = {
     },
     6: {
         "display": "Palindrome",
-        "exec": printpal,
+        "exec": print_pal,
         "type": "func"
     },
     7: {
