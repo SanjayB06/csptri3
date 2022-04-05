@@ -11,6 +11,7 @@
 - [Week 0](https://github.com/SanjayB06/csptri3/issues/1)
 - [Week 1](https://github.com/SanjayB06/csptri3/issues/2)
 - [Week 2](https://github.com/SanjayB06/csptri3/issues/3)
+- [Week 3 Video](https://drive.google.com/file/d/1KDcqGy7bUse75QYojySpOwdMTRTnfxVb/view?usp=sharing) 
 
 
 Replit Runtime:
