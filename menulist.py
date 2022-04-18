@@ -1,3 +1,4 @@
+from venv import create
 from week0.christmastree import print_tree
 from week0.ship import print_ship
 from tri2.keypad import print_matr
@@ -9,6 +10,7 @@ from week2.hack2 import dispfac
 from week2.hack2 import disp_series
 from week2.hack3 import superfac
 from week2.hack4 import print_pal
+from main import createTask
 # from Cross_Over import Affirmations
 
 
@@ -153,6 +155,11 @@ mainMenu = {
         "type": "func"
     },
     7: {
+        "display":"Create Task",
+        "exec":createTask,
+        "type":"func"
+    },
+    8: {
         "display": "Quit program",
         "exec": quit,
         "type": "func"

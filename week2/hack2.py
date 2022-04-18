@@ -1,18 +1,18 @@
 
 
 class Factorial:
-    def __init__(self, n):
+    def __init__(self, n): #initializes class
         self.n = n
 
-    def factorial(self, y=None):
-        y = self.n if y is None else y
+    def factorial(self, y=None): #factorial method
+        y = self.n if y is None else y #checks params
         product = 1
-        for x in range(1, y+1):
+        for x in range(1, y+1): #multiplies
             product *= x
         return product
 
-    def __call__(self):
-        series = [str(self.factorial(x)) for x in range(1, self.n+1)]
+    def __call__(self): #call method when object is called as function
+        series = [str(self.factorial(x)) for x in range(1, self.n+1)] #each factorial number
         return " ".join(series)
 
 
@@ -29,7 +29,7 @@ def disp_series() -> object:
 
 
 if __name__ == "__main__":
-    fac = Factorial(6)
+    fac = Factorial(6) #test case with 6
     print(fac.factorial())
     print(fac())
 

@@ -6,7 +6,7 @@ from week1.hack import InfoDb
 def print_db(key, value):
     if type(value) is str:
         print(f"{key} -------- {value}")
-    else:
+    else: #prints list differently
         print(f"{key}: ", ', '.join(value))
 # Hack 2a
 # for loop function
@@ -15,9 +15,9 @@ def print_db(key, value):
 def for_loop():
     for x in InfoDb:  # iterates over items in dictionary
         for key, value in x.items():
-            print_db(key, value)
+            print_db(key, value) #prints each item
         print()
-        print("-"*10)
+        print("-"*10) #separator
         print()
 
 # Hack 2b
@@ -29,7 +29,7 @@ def while_loop():
         for key, value in InfoDb[x].items():
             print_db(key, value)
         print()
-        print('-'*10)
+        print('-'*10) #separator
         print()
         x += 1
 
@@ -44,7 +44,7 @@ def recursive_loop():
         for key, value in InfoDb[n].items():
             print_db(key, value)
         print()
-        print("-"*10)
+        print("-"*10) #separator
         print() 
         recursive_loop(n+1)  # prints next section of database
 

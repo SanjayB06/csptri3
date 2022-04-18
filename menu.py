@@ -1,5 +1,5 @@
 from menulist import mainMenu
-
+import os
 
 def buildMenu(menu):
     for key, value in menu.items():
@@ -7,6 +7,21 @@ def buildMenu(menu):
         print(f"{key} ------ {display}")  # each menu item is printed
     print("What is your choice? (enter the number value) ")  # user input promp
 
+def menuAnim():
+    for x in range(50):
+        if x!= 50:
+            print(" "*x," \\")
+            print(" "*x,"    === \\")
+            print(" "*x,"          |")
+            print(" "*x,"    === //")
+            print(" "*x," //")
+            os.system("clear")
+        else:
+            print(" "*x," \\")
+            print(" "*x,"    === \\")
+            print("Python Main Menu "*x,"          |")
+            print(" "*x,"    === //")
+            print(" "*x," //")
 
 def presentMenu(menu):
     buildMenu(menu)  # print out menu and take input
@@ -23,6 +38,7 @@ def presentMenu(menu):
 
 if __name__ == "__main__":
     while True:  # forever loop
+        menuAnim()
         presentMenu(mainMenu)
         halt = input("Do you want to continue (y/n)? ")  # checks if user wants to go again
         if halt.lower() == "n":
