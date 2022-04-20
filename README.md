@@ -11,7 +11,11 @@
 - [Week 0](https://github.com/SanjayB06/csptri3/issues/1)
 - [Week 1](https://github.com/SanjayB06/csptri3/issues/2)
 - [Week 2](https://github.com/SanjayB06/csptri3/issues/3)
-
+- [Week 3 Video](https://drive.google.com/file/d/1KDcqGy7bUse75QYojySpOwdMTRTnfxVb/view?usp=sharing) 
+- [Week 3](https://github.com/SanjayB06/csptri3/issues/4)
+- [Week 4](https://github.com/SanjayB06/csptri3/issues/5)
+  - [Requirements](createTaskReq)
+  - [Runtime](https://replit.com/@SanjayBharadwa3/csptri3#createtask.py) 
 
 Replit Runtime:
 
