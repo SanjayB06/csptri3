@@ -1,150 +1,78 @@
 {% include nav.html %}
 
-# Sanjay Create Task
-[Link to Video](https://drive.google.com/file/d/13bSVzbcArMqwrz5k7P9z-jkPSFBETBjj/view?usp=sharing)
+# 2022 AP CSP Create Task
+
+## Written Responses
 
 ## 3a
 
-### Describe the overall purpose of the program
+### Overall Purpose
+The purpose of this program is to recommend books to the users based on their prior preferences. It is meant to help people who are interested in a particular book/genre and would like to discover books that are similar. 
 
-The overall purpose of the program is to provide the user with a set of movie recommendations, personalized and based on the users preferences, be it what genres the user enjoys, or how old the user is willing to see. The program is meant to take this factors into account and provide recommendations that the user will like. 
 
-### Describe what functionality of the program is in the Video
-The entire program is demonstrated in the video. In the video, the user selects the genres that they wish to view, and then selects how recent the movie should be. After submitting these preferences, a list of movies appears on the screen. 
+### Functionality in vieo
+The entire functionality is shown in the video. The user inputs a book that they have recently enjoyed. The program then confirms the users selection and parses the data for similar books. The user is then presented with a list of similar books. 
 
-### Describe the input and output in the video
-The input is the genre choices and recency requirement, the output is the list of movies. 
+### Input/Output
+The input is the book that the user likes and would like similar books to. It is in string form. The output is a list of 5 books and their respective genres that are most similar to the user choice. 
 
 ## 3b
 
-### The first code segment shows how data is stored in a list
-
-``` py
-    for x in range(2,len(movies)):
-        try:
-            rating = (ratings.loc[x,"rating"])
-            x_genres = movies.loc[x,"genres"].split("|")
-            common = len(set(x_genres).intersection(genres))
-            yearRegex = re.search("\((\d\d\d\d)\)",movies.loc[x,"title"])
-            year = int(yearRegex.groups()[0])
-            if common>=3 and rating >=3 and 2022-year < age:
-                results[x] = spatial.distance.cosine([rating,common,year],[5,5,2022])
-        except:
-            continue
-
-```
-### Show the Data in the list being used
-
+### List
 ```py
-    for x in list(results.keys())[:10]:
-        tmdbId = links.loc[x,"tmdbId"]
-        movie_data = requests.get("https://api.themoviedb.org/3/movie/{id}?api_key={api-key}".format(id=tmdbId)).json()
-        output[tmdbId] = {
-            "title":movie_data["title"],
-            "poster":"https://image.tmdb.org/t/p/w500" + movie_data["poster_path"],
-            "plot": movie_data["overview"],
-        }
+data = {k: v for k, v in sorted(data.items(), key=lambda item: item[1])}
 ```
+### Usage
+```py
+    results = {books.loc[k,"Book title"]:books.loc[k,"genres"].strip('][').split(",") for k in list(data.keys())[:5]}
+    print(dispDict(results,"-"))
+```
+### Identification of list
+The list is a dictionary called data. 
 
-### The name of the list
-The dictionary being used is called "results". 
+### List contents
+The dctionary contains book IDs and their corresponding similarity value. Each key, value pair represents a given book and how similar it is to the book the user likes. 
 
-### Describe what the data in the list represents
-
-The data in the list represents each movie in the database of thousands of movies, along with its corresponding similarity constant. The similarity constant indicates how similar it is to the ideal movie.
-
-### Explain complexity management
-
-Without the dictionary being used, the program would be exceptionally difficult to write, as in order for the program to be written, this dictionary must be sorted. Without it being sorted, the ratings can't be ranked. This sorting cannot occur without a dictionary to hold the values. 
+### Managing complexity
+THe list manages complexity by storing all the neccessary data in one variable. This allows the next line of code to look at the IDs in the sorted list and isolate the top 5, and then match them up with the dataset to get the genre list for each of them. Without this, it would be difficult if not impossible to sort every single book since they would not be in one location. Furthermore, outputting it in a nice way would be tedious as there would not be a single function that could do it for the entire list. 
 
 ## 3c
 
-### Paste a Student-Developed Procedure
+### Student Developed Procedure
 ```py
-def recommendation(genres,age=None):
-    if genres==None or age==None:
-        output = {}
-        return output
-    movies = readData("movieData/movies.csv","movieId")
-    dtype_dic= {'imdbId': str,
-                'tmdbId' : str}
+def dispDict(dict,delim):
+    output = ""
+    for key,value in dict.items(): #iteration
+        if type(value) is not list: #selection
+            output += (f"{key} {delim*10} {value}\n")
+        else:
+            val = ' , '.join(value) #sequencing
+            output += (f"{key} {delim*10} {val}\n")
+    return output #string output
 
-    links = readData("movieData/links.csv","movieId")
-    ratings = pd.read_csv("movieData/ratings.csv")
-    newRatings = ratings.groupby("movieId")["rating"].agg("count")
-    ratings = ratings.groupby("movieId").mean()
-    del ratings["userId"]
-    del ratings["timestamp"]
-    for index in range(1,len(newRatings)):
-        try:
-            if newRatings[index] <= 30:
-                ratings.drop(
-                    labels=[index],
-                    axis=0,
-                    inplace=True
-                )
-        except:
-            continue
-    movies['title'] = movies['title'].str.lower()
-    results = {}
-    for x in range(2,len(movies)):
-        try:
-            rating = (ratings.loc[x,"rating"])
-            x_genres = movies.loc[x,"genres"].split("|")
-            common = len(set(x_genres).intersection(genres))
-            yearRegex = re.search("\((\d\d\d\d)\)",movies.loc[x,"title"])
-            year = int(yearRegex.groups()[0])
-            if common>=3 and rating >=3 and 2022-year < age:
-                results[x] = spatial.distance.cosine([rating,common,year],[5,5,2022])
-        except:
-            continue
-    results = {k: v for k, v in sorted(results.items(), key=lambda item: item[1])}
-    results = {k:results[k] for k in list(results.keys())[:10]}
-    output = {}
-    for x in list(results.keys())[:10]:
-        tmdbId = links.loc[x,"tmdbId"]
-        movie_data = requests.get("https://api.themoviedb.org/3/movie/{id}?api_key=da1fef95c8fac680ac2ada0bcce7339b".format(id=tmdbId)).json()
-        output[tmdbId] = {
-            "title":movie_data["title"],
-            "poster":"https://image.tmdb.org/t/p/w500" + movie_data["poster_path"],
-            "plot": movie_data["overview"],
-        }
-    return output
 ```
-###  Implementation
+### Call to function in program
 ```py
-    if age==None or age < 10:
-        output = recommendation(genres,None)
+print(dispDict(options,"="))
 ```
-
-### General Description
-The procedure takes a set of inputs from the user, describing their preferences, and returns 10 movies the user may like. 
-
-
-### Explanation
-Pre existing databases are converted to easy-to-use formats and parsed (based on number of ratings.) After this, the movies dataset is iterated through, and the genres, ratings, and year for the movie are all extracted. Built in pandas functions are used for the first two, while ReGex is used to extract the year (since it is a part of the movie title). Then, if the movie has more than 3 genres in common, a rating of more than 3/5, and if the movie is recent enough (based on user input), we consider it for the next step. In the next step, cosine similarity is used to determine the similarity between this movies stats (common genres, rating, recency), and the ideal movie (all genres in common, 5 stars, made in 2022). After this, the dictionary is sorted by ascending distance (big number means less similar). The top 10 movies are selected, and their unique IDs are used to get more data using the tMDB API. A dictionary with all this  is returned to be displayed to the user. 
+### Explanation of Algorithm
+The program takes in two parameters, a dictionary and a delimiter. The delimiter is simply a character that will be repeated to separate key from value. The program then uses a for loop to iterate through each key value pair in the dictionary. An if/else conditional is then used to determine what must be done with the key value pair. If the value pair contains a list, then the program converts the list to a string joined by commas. Otherwise the value is left as is. The key and new value are then separated by the delimiter and added to the output string. The output string is then returned. 
 
 ## 3d
 
-### First Implementation
+### Call to function 1
 ```py
-    if age==None or age < 10 or genres==None or genres ==[]:
-        output = recommendation(None,None)
+print(dispDict(options,"="))
 ```
 
-### Second Implementation
+### Call to function 2
 ```py
-output = recommendation(genres,age)
+print(dispDict(data,"-"))
 ```
 
-### Input for First
-The first procedure takes None types as parameters, as the user has failed to provide proper inputs (invalid or none). 
+## Tessted Conditions
+The test cases are what data type the value in the dictionary is. If there is a list value, then the function will have to join the list with commas and add them to the final string that will be returned. In the event that the value is a string rather than a list, it will be joined with its key and added to the final list. 
 
-### Input for second
-The second procedure takes two variables as inputs. The first variable is "genres". This is a list of genres the user likes, provided by the user through an HTML form. The second input is an integer value for age, provided by the user. This is an integer represeting how recent the user wants the movies to be.
-
-### Output for first
-The result of the first call is an empty dictionary, since both parameters were None types, since user inputs were invalid. 
-
-### Output for second
-The output for the second dynamically changes each time the program is executed, as it depends on the input parameters, which in turn depend on what the user passes in. However, in all cases, the program will output a dictionary with 10 keys. Each key will be a separate movie id. Each corressponding value will be another dictionary. This dictionary will have items for the movie title, the movie description/plot, and an image link for the movies poster. These will all be used by the HTML to display a list of movies with neccessary data to the user. 
+### Results of calls
+The result of the first call is a multiline string. Inside this string are several lines, each of which contain a number/ID. Each line also contains the title of a book. The ID and title in each row are separated by 10 equal signs for readability. 
+The result of the second call is a multiline string with several lines. Each line contains the title of a book that the reader is being recommended. Each line also contains a list of that books genres. The title and list of genres are separated by 10 hyphens. 
