@@ -5,5 +5,6 @@
 - [Week 0](testprep/week0)
 - [Week 1](testprep/week1)
 - [Week 2](testprep/week2)
-- [Week 5](testprep/week5)
+- [Week 4](testprep/week5)
 - [Study Plan](testprep/studyplan)
+- [Study Plan](https://github.com/SanjayB06/csptri3/issues/7)
