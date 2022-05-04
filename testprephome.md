@@ -8,3 +8,4 @@
 - [Week 4](testprep/week5)
 - [Study Plan](testprep/studyplan)
 - [Study Plan](https://github.com/SanjayB06/csptri3/issues/7)
+- [Week 7](testprep/week7)
