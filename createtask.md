@@ -1,7 +1,7 @@
 {% include nav.html %}
 
 # 2022 AP CSP Create Task
-
+[Link to Video](https://drive.google.com/file/d/1CZEkf9FkYtXkrSZYNXruStK5O1kByXRv/view?usp=sharing)
 ## Written Responses
 
 ## 3a
