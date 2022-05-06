@@ -18,3 +18,19 @@
 
 ### Friday
 - APCSP Practice MC (Timed)
+
+## May 2 - 6
+### Monday
+- Watch 2 CB Lectures
+
+### Tuesday
+- Watch CB Lectures
+
+### Wednesday
+- Watch CB Lectures
+- Timed MC
+### Thursday
+- Watch CB Lectures
+- go over quiz corrections
+### Friday
+- APCSP Practice MC (Timed)

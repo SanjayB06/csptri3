@@ -14,3 +14,12 @@ Error in reading the flow chart. Did not understand that the condition used an O
 
 # Q41
 Forgot how public key encryption worked. Resulted in selecting the wrong answer. Public key encryption involves the recipients public and private key. 
+
+# Week 3 Quiz 5
+![](https://i.imgur.com/wERsXR8.png)
+
+# Q15
+Didn't notice that both displayed 10, thought that the order of print and increment would affect the number of values displayed. Instead it only affects what values are displayed. 
+
+# Q48
+Forgot what the role of certificate authorities is. It isn't to certify websites but to certify encryption keys used in secure communcation. 
